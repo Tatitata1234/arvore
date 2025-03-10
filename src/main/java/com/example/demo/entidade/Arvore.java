@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.entidade;
 
 import java.util.ArrayDeque;
 import java.util.Objects;

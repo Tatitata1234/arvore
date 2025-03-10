@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.aulaum;
 
 public class ExercicioSeisESete {
     //Exercício 6

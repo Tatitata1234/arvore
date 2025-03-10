@@ -1,4 +1,6 @@
-package com.example.demo;
+package com.example.demo.aulaum;
+
+import com.example.demo.entidade.Arvore;
 
 public class ExercicioQuatro {
     public static void main(String[] args) {
