@@ -1,4 +1,4 @@
-package com.example.demo.entidade;
+package com.example.demo.aulaum.entidade;
 
 import java.util.ArrayDeque;
 import java.util.Objects;
@@ -6,6 +6,12 @@ import java.util.Queue;
 
 public class Arvore<T extends Comparable<T>> {
     private No<T> raiz = null;
+
+    private StringBuilder builderInOrder = new StringBuilder();
+
+    private StringBuilder builderPostOrder = new StringBuilder();
+
+    private StringBuilder builderPreOrder = new StringBuilder();
 
     public No<T> procura(T el) {
         return procura(this.raiz, el);
@@ -74,7 +80,7 @@ public class Arvore<T extends Comparable<T>> {
 
     private void preorder(No<T> no) {
         if (no != null) {
-            System.out.print(no.getChave() + " ");
+            builderPreOrder.append(no.getChave()).append(" ");
             preorder(no.getEsquerda());
             preorder(no.getDireita());
         }
@@ -85,9 +91,10 @@ public class Arvore<T extends Comparable<T>> {
     }
 
     private void inorder(No<T> no) {
+
         if (no != null) {
             inorder(no.getEsquerda());
-            System.out.print(no.getChave() + " ");
+            builderInOrder.append(no.getChave()).append(" ");
             inorder(no.getDireita());
         }
     }
@@ -100,7 +107,7 @@ public class Arvore<T extends Comparable<T>> {
         if (no != null) {
             postorder(no.getEsquerda());
             postorder(no.getDireita());
-            System.out.print(no.getChave() + " ");
+            builderPostOrder.append(no.getChave()).append(" ");
         }
     }
 
@@ -217,5 +224,29 @@ public class Arvore<T extends Comparable<T>> {
 
     public No<T> getRaiz() {
         return this.raiz;
+    }
+
+    public String getBuilderInOrder() {
+        return builderInOrder.toString().trim();
+    }
+
+    public void cleanBuilderInOrder() {
+        this.builderInOrder = new StringBuilder();
+    }
+
+    public String getBuilderPostOrder() {
+        return builderPostOrder.toString().trim();
+    }
+
+    public void cleanBuilderPostOrder() {
+        this.builderPostOrder = new StringBuilder();
+    }
+
+    public String getBuilderPreOrder() {
+        return builderPreOrder.toString().trim();
+    }
+
+    public void cleanBuilderPreOrder() {
+        this.builderPreOrder = new StringBuilder();
     }
 }

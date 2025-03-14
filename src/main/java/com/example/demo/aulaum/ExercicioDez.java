@@ -1,6 +1,6 @@
 package com.example.demo.aulaum;
 
-import com.example.demo.entidade.Arvore;
+import com.example.demo.aulaum.entidade.Arvore;
 
 public class ExercicioDez {
     public static void main(String[] args) {

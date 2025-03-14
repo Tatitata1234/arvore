@@ -1,4 +1,4 @@
-package com.example.demo.entidade;
+package com.example.demo.aulaum.entidade;
 
 public class No<T extends Comparable<T>> {
     private T chave;

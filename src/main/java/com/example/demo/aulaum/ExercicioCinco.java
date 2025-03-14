@@ -1,6 +1,6 @@
 package com.example.demo.aulaum;
 
-import com.example.demo.entidade.Arvore;
+import com.example.demo.aulaum.entidade.Arvore;
 
 public class ExercicioCinco {
     public static void main(String[] args) {
@@ -22,17 +22,28 @@ public class ExercicioCinco {
         arvore.inserir(54);
 
         arvore.inorder();
-        System.out.println();
+        System.out.println(arvore.getBuilderInOrder());
+        arvore.cleanBuilderInOrder();
+
         arvore.deletarPorFusao(12);
         arvore.inorder();
-        System.out.println();
+        System.out.println(arvore.getBuilderInOrder());
+        arvore.cleanBuilderInOrder();
+
         arvore.deletarPorCopia(36);
         arvore.inorder();
-        System.out.println();
+        System.out.println(arvore.getBuilderInOrder());
+        arvore.cleanBuilderInOrder();
+
         arvore.deletarPorCopia(8);
         arvore.inorder();
-        System.out.println();
+        System.out.println(arvore.getBuilderInOrder());
+        arvore.cleanBuilderInOrder();
+
         arvore.deletarPorCopia(6);
         arvore.inorder();
+        System.out.println(arvore.getBuilderInOrder());
+        arvore.cleanBuilderInOrder();
+
     }
 }

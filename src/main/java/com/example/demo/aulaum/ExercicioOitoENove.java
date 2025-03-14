@@ -1,6 +1,6 @@
 package com.example.demo.aulaum;
 
-import com.example.demo.entidade.Arvore;
+import com.example.demo.aulaum.entidade.Arvore;
 
 public class ExercicioOitoENove {
     //começar pela raiz colocar os filhos na fila e depois visitar um a um da fila
